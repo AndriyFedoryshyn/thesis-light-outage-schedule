@@ -10,7 +10,7 @@ import { Header } from "../components/modules/Header/Header";
 import { Footer } from "../components/modules/Footer/Footer";
 import { Main } from "../components/modules/Main/Main";
 
-import { Wrapper } from "../components/Wrapper/Wrapper";
+import { Wrapper } from "../components/containers/Wrapper/Wrapper";
 
 const robotoFont = Roboto({
   subsets: ["latin"],
