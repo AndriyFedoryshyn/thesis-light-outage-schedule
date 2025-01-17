@@ -1,0 +1,7 @@
+@use "../../../styles/abstracts/mixins/mixins" as *;
+
+.main {
+    @include resizeContainer;
+    min-height: 100vh;
+    flex: 1 1 auto;
+}
