@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Документація до завдання: Адаптація сторінки "Графік відключень світла"
 
-## Getting Started
+## Мета завдання
 
-First, run the development server:
+Реалізувати адаптацію сторінки графіку відключень світла для мобільних пристроїв та користувачів з обмеженими можливостями, забезпечуючи високу доступність (Accessibility), покращення UI/UX та повну підтримку стандартів WCAG (Web Content Accessibility Guidelines).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Задачі
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Аналіз існуючої сторінки:**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   - Визначити основні проблеми у дизайні, доступності та адаптивності сторінки.
 
-## Learn More
+2. **Реалізація UI-змін:**
 
-To learn more about Next.js, take a look at the following resources:
+   - Покращення читабельності тексту.
+   - Виправлення кольорової контрастності.
+   - Збільшення розміру та відступів елементів.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Реалізація функцій доступності:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   - Підтримка екранних читалок (ARIA-атрибути).
+   - Текстові описи (alt-теги) для зображень.
+   - Навігація через клавіатуру.
 
-## Deploy on Vercel
+4. **Реалізація додаткового функціоналу:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   - Масштабування тексту.
+   - Кнопка для голосового читання вмісту.
+   - Темний/світлий режими.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+5. **Адаптація для мобільних пристроїв:**
+
+   - Використання медіа-запитів.
+   - Оптимізація таблиць, кнопок, форм для невеликих екранів.
+
+6. **Тестування доступності:**
+   - Перевірка на відповідність стандартам WCAG за допомогою Lighthouse, WAVE та інших інструментів.
+
+---
+
+## Технічні вимоги
+
+### UI/UX
+
+- **Шрифти:** Основний розмір шрифту не менше 16px; для заголовків — 20px+.
+- **Контрастність:** Відповідність WCAG рівня AA (мінімум 4.5:1 для тексту).
+- **Відступи:** Не менше 10px між елементами для зручної взаємодії.
+- **Кнопки:** Ширина не менше 44px.
+- **Навігація:** Чітке розташування елементів, зручний фокус для клавіатури.
+
+### Доступність (Accessibility)
+
+- **ARIA-атрибути:** Для таблиць, кнопок, форм.
+- **Альт-теги:** Для всіх зображень і графічних елементів.
+- **Клавіатурна навігація:** Підтримка переходу між елементами через клавішу `Tab`.
+- **Читання тексту:** Інтеграція голосового синтезатора (через Web Speech API).
+
+### Мобільна адаптація
+
+- **Медіа-запити:** Для екранів менше 768px.
+- **Таблиці:** Реалізація горизонтального прокручування, якщо таблиця не поміщається на екрані.
+- **Кнопки:** Зміна розміру та вирівнювання для маленьких екранів.
+
+---
+
+## Реалізація
+
+### 1. Покращення UI
+
+- Встановлено основний шрифт `Roboto`, розмір тексту збільшено до `16px`.
+- Контрастність тексту приведено до рівня WCAG AA: чорний текст на світло-сірому фоні.
+- Відступи між елементами збільшено до 10px-20px.
+- Зробити перемикання мови по кліку на кнопку.
