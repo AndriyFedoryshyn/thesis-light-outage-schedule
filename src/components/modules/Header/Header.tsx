@@ -3,15 +3,17 @@ import { type FC } from "react";
 import Image from "next/image";
 
 import { HeaderForm } from "./HeaderForm";
+import { Div } from "@/components/ui/Div/Div";
+import { Heading } from "@/components/ui/Heading/Heading";
 
 import styles from "./Header.module.scss";
 
 export const Header: FC = () => {
   return (
     <header className={styles["header"]} role="banner">
-      <div className={styles["headerContainer"]}>
-        <div className={styles["headerContainerRow"]}>
-          <div
+      <Div className={styles["headerContainer"]}>
+        <Div className={styles["headerContainerRow"]}>
+          <Div
             className={styles["headerLogo"]}
             role="img"
             aria-label="Логотип компанії Energy-UA"
@@ -26,15 +28,17 @@ export const Header: FC = () => {
               height={55}
               priority
             />
-            <div className={styles["headerLogoHeadings"]}>
-              <h4 className={styles["headerLogoHeading"]}>Energy-UA</h4>
-              <h5 className={styles["headerLogoSubheading"]}>
+            <Div className={styles["headerLogoHeadings"]}>
+              <Heading level="h4" className={styles["headerLogoHeading"]}>
+                Energy-UA
+              </Heading>
+              <Heading level="h5" className={styles["headerLogoSubheading"]}>
                 Графіки відключень
-              </h5>
-            </div>
-          </div>
+              </Heading>
+            </Div>
+          </Div>
 
-          <div className={styles["headerLocation"]} tabIndex={0}>
+          <Div className={styles["headerLocation"]} tabIndex={0}>
             <Image
               src={"/icons/location_logo.svg"}
               className={styles["headerLocationIcon"]}
@@ -44,21 +48,22 @@ export const Header: FC = () => {
               priority
             />
             <h5 className={styles["headerLocationMark"]}>Львівська обл.</h5>
-          </div>
-        </div>
-      </div>
+          </Div>
+        </Div>
+      </Div>
 
-      <div className={styles["headerMainHeadingContainer"]}>
-        <h1
+      <Div className={styles["headerMainHeadingContainer"]}>
+        <Heading
+          level="h1"
           className={styles["headerMainHeading"]}
           aria-live="polite"
           tabIndex={0}
         >
           Графік відключення електроенергії у Львівській області
-        </h1>
+        </Heading>
 
         <HeaderForm />
-      </div>
+      </Div>
     </header>
   );
 };

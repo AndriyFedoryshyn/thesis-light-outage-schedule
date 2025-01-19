@@ -1,1 +1,8 @@
 @use "../abstracts/mixins/mixins" as *;
+@use "../base/colors/colors" as color;
+@use "../base/globals/globals" as size;
+
+.home {
+    display: flex;
+    justify-content: center;
+}
