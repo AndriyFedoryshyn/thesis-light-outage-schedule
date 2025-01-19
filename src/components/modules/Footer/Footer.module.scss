@@ -1,0 +1,85 @@
+@use "../../../styles/abstracts/mixins/mixins" as *;
+@use "../../../styles/base/colors/colors" as color;
+@use "../../../styles/base/globals/globals" as size;
+
+.footer {
+    border-top: 0.1rem solid color.$color-chart-button-background;
+    &Container {
+        @include resizeContainer;
+        padding-block: 2.5rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+
+        & > .footerRegionsList {
+            width: 100%;
+            max-width: 65%;
+            display: flex;
+            flex-flow: column wrap;
+            gap: 2.25rem;
+            & > .regionsListHeading {
+                font-weight: 500;
+                color: color.$color-black-heading;
+                font-size: size.$alert-banner-size;
+            }
+        }
+
+        & .regionsList {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+
+            &Button {
+                font-size: 1.1rem;
+                padding: 0.625rem 0.5rem;
+                border-radius: 0.5rem;
+                background: color.$color-chart-button-background;
+                color: color.$color-black-heading;
+            }
+        }
+    }
+
+    &Information {
+        width: 100%;
+        max-width: 23%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    &InformationHeading {
+        font-weight: 500;
+        color: color.$color-black-heading;
+        font-size: size.$alert-banner-size;
+    }
+
+    &InformationList {
+        display: flex;
+        flex-direction: column;
+        gap: 0.625rem;
+    }
+
+    &InformationListItem {
+        color: color.$color-black-heading;
+    }
+
+    &SocialList {
+        padding-block-start: 0.625rem;
+        width: 100%;
+        max-width: fit-content;
+        border-top: 0.1rem solid color.$color-chart-button-background;
+        display: flex;
+        align-items: center;
+        gap: 0.725rem;
+    }
+
+    &SocialListItem {
+        & > button {
+            background: transparent;
+            & > img {
+                max-width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
