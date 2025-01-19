@@ -28,9 +28,10 @@ export const AlertBanner: FC = () => {
         className={styles["alertBannerIcon"]}
         src={"/icons/alert_icon.svg"}
         alt="Alert Icon"
+        priority
         role="image"
         aria-hidden={true}
-        width={9}
+        width={8}
         height={32}
       />
 

@@ -4,5 +4,7 @@
 
 .home {
     display: flex;
-    justify-content: center;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 3.125rem;
 }
