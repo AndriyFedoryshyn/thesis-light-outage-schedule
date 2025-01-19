@@ -27,6 +27,7 @@ export const ChartList: FC<ChartListProps> = ({ classNames, list }) => {
       {list.map((listItem: ButtonChart) => (
         <li key={listItem.id} className={classNames.listItem} role="listitem">
           <button
+            title={`Група ${listItem.numberOfGroup}`}
             aria-label={`Перейти до графіка групи ${listItem.group}`}
             className={classNames.button}
             onKeyDown={(e) => handleKeyDown(e, listItem.group)}

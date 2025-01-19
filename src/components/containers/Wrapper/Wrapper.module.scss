@@ -1,6 +1,17 @@
 @use "../../../styles/abstracts/mixins/mixins" as *;
+@use "../../../styles/base/colors/colors" as color;
 
 .wrapper {
-   display: flex;
+    display: flex;
     flex-direction: column;
+}
+
+.wrapper {
+    background-color: color.$light-background;
+    color: color.$light-text;
+
+    &.dark-mode {
+        background-color: color.$dark-background;
+        color: color.$dark-text;
+    }
 }

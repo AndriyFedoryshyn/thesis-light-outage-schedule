@@ -7,8 +7,9 @@ import { ukraineRegions } from "@/static/regions";
 import { Div } from "@/components/ui/Div/Div";
 import { Heading } from "@/components/ui/Heading/Heading";
 
-import styles from "./Footer.module.scss";
 import { FooterInformation } from "./FooterInformation";
+
+import styles from "./Footer.module.scss";
 
 export const Footer: FC = () => {
   const handleKeyDown = (event: React.KeyboardEvent, regionName: string) => {

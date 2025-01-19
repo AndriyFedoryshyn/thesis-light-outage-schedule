@@ -7,6 +7,7 @@ import { Div } from "@/components/ui/Div/Div";
 import { Heading } from "@/components/ui/Heading/Heading";
 
 import styles from "./Header.module.scss";
+import { ThemeToggle } from "@/components/ui/ThemeToggle/ThemeToggle";
 
 export const Header: FC = () => {
   return (
@@ -37,17 +38,19 @@ export const Header: FC = () => {
               </Heading>
             </Div>
           </Div>
-
-          <Div className={styles["headerLocation"]} tabIndex={0}>
-            <Image
-              src={"/icons/location_logo.svg"}
-              className={styles["headerLocationIcon"]}
-              alt="Логотип локації"
-              width={15}
-              height={15}
-              priority
-            />
-            <h5 className={styles["headerLocationMark"]}>Львівська обл.</h5>
+          <Div className={styles["headerLocationThemeBlock"]}>
+            <Div className={styles["headerLocation"]} tabIndex={0}>
+              <Image
+                src={"/icons/location_logo.svg"}
+                className={styles["headerLocationIcon"]}
+                alt="Логотип локації"
+                width={15}
+                height={15}
+                priority
+              />
+              <h5 className={styles["headerLocationMark"]}>Львівська обл.</h5>
+            </Div>
+            <ThemeToggle />
           </Div>
         </Div>
       </Div>

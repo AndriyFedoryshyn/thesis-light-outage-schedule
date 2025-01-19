@@ -11,6 +11,7 @@ import { Footer } from "../components/modules/Footer/Footer";
 import { Main } from "../components/modules/Main/Main";
 
 import { Wrapper } from "../components/containers/Wrapper/Wrapper";
+import { ThemeProvider } from "@/components/ui/ThemeContext/ThemeContext";
 
 const robotoFont = Roboto({
   subsets: ["latin"],
@@ -31,11 +32,13 @@ export default function RootLayout({
   return (
     <html lang="uk">
       <body className={robotoFont.className}>
-        <Wrapper>
-          <Header />
-          <Main>{children}</Main>
-          <Footer />
-        </Wrapper>
+        <ThemeProvider>
+          <Wrapper>
+            <Header />
+            <Main>{children}</Main>
+            <Footer />
+          </Wrapper>
+        </ThemeProvider>
       </body>
     </html>
   );

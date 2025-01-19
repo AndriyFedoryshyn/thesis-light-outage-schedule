@@ -56,6 +56,12 @@
         color: color.$color-black-heading;
     }
 
+    &LocationThemeBlock {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
     &Location {
         max-width: fit-content;
         background: color.$color-location-background;
