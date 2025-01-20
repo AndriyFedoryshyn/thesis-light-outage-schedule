@@ -21,7 +21,6 @@ export const HeaderForm: FC = () => {
     <form
       onSubmit={handleSubmitForm}
       className={styles["headerForm"]}
-      aria-labelledby="searchForm"
     >
       <label htmlFor="searchInput" className={styles["headerFormSerachLabel"]}>
         Введіть населений пункт для пошуку

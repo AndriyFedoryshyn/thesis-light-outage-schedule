@@ -128,10 +128,15 @@
         padding-inline: 3rem;
 
         background: url("/icons/search_logo.svg") no-repeat 1rem;
+        transition: border 0.1s ease-in-out 0s;
 
         &::placeholder {
             color: rgba(color.$color-black-heading, 0.7);
             font-size: 1.25rem;
+        }
+
+        &:focus {
+            border: 0.2rem solid color.$dark-button-bg;
         }
     }
 }

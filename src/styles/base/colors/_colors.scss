@@ -1,9 +1,10 @@
 $color-black-heading: #0f3547;
 $color-location-background: #0000000d;
-$color-alert-background: #fceaab;
+$color-alert-background: rgb(252, 234, 171);
 $color-alert-border: #f88463;
-$color-alert-text: #f74737;
+$color-alert-text: rgb(247, 71, 55);
 $color-chart-button-background: #f0ebe2;
+$color-settlements-background: #fdf7ee;
 
 $light-background: #ffffff;
 $light-text: #333333;
@@ -15,7 +16,7 @@ $dark-border: #333333;
 $light-background: #ffffff;
 $light-text: #333333;
 $light-border: #f0ebe2;
-$light-button-bg: #f0f0f0;
+$light-button-bg: $color-chart-button-background;
 $light-button-text: #333333;
 
 $dark-background: #121212;

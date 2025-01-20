@@ -35,7 +35,7 @@ export const AlertBanner: FC = () => {
         height={32}
       />
 
-      <Heading level="h3" className={styles["alertBannerHeading"]}>
+      <Heading level="h2" className={styles["alertBannerHeading"]}>
         УВАГА! Через ракетну атаку і пошкодження об&apos;єктів інфраструктури в
         області застосовано аварійні та превентивні відключення. Актуальну
         інформацію можна{" "}
