@@ -127,3 +127,30 @@
         }
     }
 }
+
+@media (max-width: 64rem) {
+    .footerInformation {
+        max-width: 27%;
+    }
+}
+
+@media (max-width: 56.5625rem) {
+    .footerContainer {
+        flex-direction: column;
+        gap: 2rem;
+
+        .footerRegionsList {
+            max-width: 100%;
+        }
+    }
+
+    .footerInformation {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 35.625rem) {
+    .footerContainer {
+        padding-inline: 0.8rem;
+    }
+}

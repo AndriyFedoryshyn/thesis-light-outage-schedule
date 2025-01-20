@@ -8,8 +8,14 @@ import { Heading } from "@/components/ui/Heading/Heading";
 
 import styles from "./Header.module.scss";
 import { ThemeToggle } from "@/components/ui/ThemeToggle/ThemeToggle";
+import { Areas } from "@/types/AreasType";
 
-export const Header: FC = () => {
+interface HeaderProps {
+  onSearch: (searchTerm: string) => void;
+  settlements: Areas;
+}
+
+export const Header: FC<HeaderProps> = ({ onSearch, settlements }) => {
   return (
     <header className={styles["header"]} role="banner">
       <Div className={styles["headerContainer"]}>
@@ -65,7 +71,7 @@ export const Header: FC = () => {
           Графік відключення електроенергії у Львівській області
         </Heading>
 
-        <HeaderForm />
+        <HeaderForm onSearch={onSearch} settlements={settlements} />
       </Div>
     </header>
   );

@@ -9,26 +9,30 @@ import { alphabet } from "@/static/alphabet";
 
 import { Areas } from "@/types/AreasType";
 
-import { useFetch } from "@/hooks/useFetch";
-
 import styles from "./SettlementsList.module.scss";
 
-export const SettlementsList: FC = () => {
-  const { data } = useFetch<Areas>({
-    url: "/api/locations.json",
-  });
+interface SettlementsListProps {
+  searchQuery: string;
+  data: Areas;
+}
 
+export const SettlementsList: FC<SettlementsListProps> = ({
+  searchQuery,
+  data,
+}) => {
   const [selectedLetter, setSelectedLetter] = useState<string>("А");
 
   const filteredData = data
-    ?.filter((area) =>
-      area.name.uk.toLowerCase().startsWith(selectedLetter.toLowerCase())
-    )
+    ?.filter((area) => {
+      const matchesLetter = area.name.uk
+        .toLowerCase()
+        .startsWith(selectedLetter.toLowerCase());
+      const matchesSearch = area.name.uk
+        .toLowerCase()
+        .includes(searchQuery.toLowerCase());
+      return matchesLetter && matchesSearch;
+    })
     .sort((a, b) => a.name.uk.localeCompare(b.name.uk));
-
-  if (!data) {
-    return null;
-  }
 
   return (
     <Section className={styles["settlementsList"]}>

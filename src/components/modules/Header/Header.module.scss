@@ -3,6 +3,7 @@
 @use "../../../styles/abstracts/mixins/mixins" as *;
 
 .header {
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-flow: column nowrap;
@@ -138,5 +139,57 @@
         &:focus {
             border: 0.2rem solid color.$dark-button-bg;
         }
+    }
+
+    & .suggestionsDropdown {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 60vw;
+        gap: 0.5rem;
+        padding: 1rem;
+        border-radius: 1rem;
+        background: color.$color-chart-button-background;
+
+        & > li {
+            width: 100%;
+            text-align: center;
+            padding: 0.5rem;
+            border-radius: 0.3rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.1s ease-in-out 0s;
+            &:hover {
+                background: color.$dark-border;
+            }
+        }
+    }
+}
+
+@media (max-width: 64rem) {
+    .headerMainHeading {
+        text-align: center;
+        font-size: 3.125rem;
+    }
+}
+
+@media (max-width: 56.5625rem) {
+    .headerMainHeading {
+        line-height: 4.3125rem;
+    }
+}
+
+@media (max-width: 35.625rem) {
+    .headerLocationThemeBlock {
+        flex-flow: column-reverse nowrap;
+    }
+
+    .headerMainHeading {
+        font-size: 2.8rem;
+        line-height: 3.125rem;
+    }
+
+    .header {
+        padding-inline: 0.8rem;
     }
 }

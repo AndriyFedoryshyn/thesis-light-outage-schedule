@@ -6,7 +6,6 @@ import { Roboto } from "next/font/google";
 
 import "@/styles/main/main.scss";
 
-import { Header } from "../components/modules/Header/Header";
 import { Footer } from "../components/modules/Footer/Footer";
 import { Main } from "../components/modules/Main/Main";
 
@@ -34,7 +33,6 @@ export default function RootLayout({
       <body className={robotoFont.className}>
         <ThemeProvider>
           <Wrapper>
-            <Header />
             <Main>{children}</Main>
             <Footer />
           </Wrapper>

@@ -32,3 +32,10 @@
         text-decoration: none;
     }
 }
+
+@media (max-width: 56.5625rem) {
+    .alertBannerHeading {
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+    }
+}
