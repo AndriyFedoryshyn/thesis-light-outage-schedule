@@ -145,7 +145,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 60vw;
+        width: 100%;
+        max-width: 60%;
         gap: 0.5rem;
         padding: 1rem;
         border-radius: 1rem;
@@ -191,5 +192,13 @@
 
     .header {
         padding-inline: 0.8rem;
+    }
+
+    .headerFormSearch {
+        max-width: 80%;
+
+        &::placeholder {
+            font-size: 1.2rem;
+        }
     }
 }
